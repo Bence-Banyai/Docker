@@ -16,5 +16,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag cr.jedlik.cloud/html-banyaibence
-        docker push cr.jedlik.cloud/html-banyaibence
+        docker build . --file Dockerfile --tag ghcr.io/bence-banyai/html:0.1
+        docker login ghcr.io -u bence-banyai -p ${{secrets.GHCR_TOKEN}}
+        docker push ghcr.io/bence-banyai/html:0.1
