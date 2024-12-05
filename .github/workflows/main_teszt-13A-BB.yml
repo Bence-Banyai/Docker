@@ -48,4 +48,4 @@ jobs:
         app-name: 'teszt-13A-BB'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_f8699dff8c094996825012943f945512 }}
-        images: 'ghcr.io/${{ secrets.AzureAppService_ContainerUsername_db413bf18ce247dfae6dba8a01adf574 }}/bence-banyai/test-azure-webapp:${{ github.sha }}'
+        images: 'ghcr.io/bence-banyai/test-azure-webapp:${{ env.IMAGE_TAG }}'
